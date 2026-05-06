@@ -1,0 +1,205 @@
+/* style.css — Estilo do sistema de cadastro de pacientes */
+
+/* ── Reset e base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+/* ── Container central ────────────────────────────────────── */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Cabeçalho ────────────────────────────────────────────── */
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #1a73e8;
+}
+
+/* ── Card (seções) ────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #444;
+  border-bottom: 2px solid #e8f0fe;
+  padding-bottom: 10px;
+}
+
+/* ── Formulário ───────────────────────────────────────────── */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.campo input {
+  padding: 10px 14px;
+  border: 1px solid #cdd6e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.campo input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+/* ── Botões ───────────────────────────────────────────────── */
+.botoes {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-primario {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primario:hover {
+  background: #1558b0;
+}
+
+.btn-secundario {
+  background: #f1f3f4;
+  color: #444;
+  border: 1px solid #cdd6e0;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-secundario:hover {
+  background: #e2e6ea;
+}
+
+/* ── Mensagem de feedback ─────────────────────────────────── */
+.mensagem {
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.mensagem.sucesso {
+  background: #e6f4ea;
+  color: #2d7a3a;
+  border: 1px solid #b7dfbe;
+}
+
+.mensagem.erro {
+  background: #fce8e6;
+  color: #c5221f;
+  border: 1px solid #f5c6c4;
+}
+
+/* ── Tabela ───────────────────────────────────────────────── */
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+thead tr {
+  background: #e8f0fe;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+th {
+  font-weight: 700;
+  color: #1a73e8;
+}
+
+tr:hover td {
+  background: #f8faff;
+}
+
+/* ── Botões de ação na tabela ─────────────────────────────── */
+.acoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-editar, .btn-excluir {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-editar {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.btn-excluir {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.btn-editar:hover, .btn-excluir:hover {
+  opacity: 0.75;
+}
+
+/* ── Responsivo ───────────────────────────────────────────── */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.5rem; }
+  .card { padding: 18px; }
+  th, td { padding: 9px 10px; }
+}

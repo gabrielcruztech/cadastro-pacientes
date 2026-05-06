@@ -1,0 +1,7 @@
+# Variáveis de ambiente sensíveis
+.env
+
+# Dependências e sistema
+node_modules/
+.DS_Store
+Thumbs.db
